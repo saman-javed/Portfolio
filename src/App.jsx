@@ -7,6 +7,7 @@ import HomePg from "./Pages/HomePg";
 import BannerSection from "./Components/BannerSection/BannerSection";
 import BlogSection from "./Components/BlogSection/BlogSection";
 import ServiceSlider from "./Components/ServiceSlider/ServiceSlider";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
           <Route path="/banner" element={<BannerSection />} />
           <Route path="/blog" element={<BlogSection />} />
           <Route path="/services" element={<ServiceSlider />} />
+          <Route path="/footer" element={<Footer />} />
         </Routes>
     </Router>
   );

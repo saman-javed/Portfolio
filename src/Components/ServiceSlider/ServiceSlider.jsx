@@ -18,7 +18,14 @@ const data = [
     title: 'Strengthen future readiness against threats and ensure secure data.',
     button: 'Cybersecurity',
   },
-  // You can add more if needed
+  {
+    title: 'Define clear project scopes, achieve technological clarity, and develop a reliable execution strategy.',
+    button: 'Discovery Workshop',
+  },
+  {
+    title: 'Build or enhance digital products that are reliable, high-performance, and designed to scale quickly.',
+    button: 'Application Development',
+  },
 ];
 
 const Slider = () => {
@@ -60,6 +67,7 @@ const Slider = () => {
               <div className="card-content">
                 <div className="dot"></div>
                 <p className="card-title">{item.title}</p>
+                
               </div>
               <button className="card-button">{item.button}</button>
             </div>
