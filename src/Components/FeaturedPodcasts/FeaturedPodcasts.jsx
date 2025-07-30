@@ -81,7 +81,7 @@ export default function FeaturedPodcasts() {
       <div className="podcast-header">
         <h2 className="podcast-heading">Featured Podcasts</h2>
       <div className="header-right">
-  <div className="all-podcasts">All Products</div>
+  <div className="all-podcasts">All Podcasts</div>
    <button className="arrow-btn" onClick={handlePrev}>
   <i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i>
 </button>

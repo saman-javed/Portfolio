@@ -27,7 +27,7 @@ const cards = [
     backgroundImage: backgroundImage1,
   },
   {
-    sector: 'Finance',
+    sector: 'Technology',
     title1: 'AI Automation in',
     title2: 'Banking Sector',
     logo: 'https://tkxel.com/wp-content/uploads/2024/02/ABB.svg',
@@ -41,7 +41,7 @@ const cards = [
     backgroundImage: backgroundImage2,
   },
   {
-    sector: 'Healthcare',
+    sector: 'E-Commerce',
     title1: 'Remote Patient Monitoring',
     title2: 'with IoT Devices',
     logo: 'https://tkxel.com/wp-content/uploads/2024/02/ABB.svg',
@@ -55,7 +55,7 @@ const cards = [
     backgroundImage: backgroundImage3,
   },
   {
-    sector: 'Manufacturing',
+    sector: 'Telecom',
     title1: 'Streamlined Operations',
     title2: 'With Salesforce & Azure Integration',
     logo: 'https://tkxel.com/wp-content/uploads/2024/02/ABB.svg',
@@ -69,7 +69,7 @@ const cards = [
     backgroundImage: backgroundImage4,
   },
   {
-    sector: 'Finance',
+    sector: 'HealthCare',
     title1: 'AI Automation in',
     title2: 'Banking Sector',
     logo: 'https://tkxel.com/wp-content/uploads/2024/02/ABB.svg',
@@ -97,7 +97,7 @@ const cards = [
     backgroundImage: backgroundImage6,
   },
   {
-    sector: 'Finance',
+    sector: 'Legal Services',
     title1: 'AI Automation in',
     title2: 'Banking Sector',
     logo: 'https://tkxel.com/wp-content/uploads/2024/02/ABB.svg',
@@ -111,7 +111,7 @@ const cards = [
     backgroundImage: backgroundImage7,
   },
   {
-    sector: 'Manufacturing',
+    sector: 'Information Technology',
     title1: 'Streamlined Operations',
     title2: 'With Salesforce & Azure Integration',
     logo: 'https://tkxel.com/wp-content/uploads/2024/02/ABB.svg',
@@ -143,13 +143,13 @@ const SuccessStories = () => {
           <h3>Success Stories in Spotlight</h3>
         </div>
         <div className="slider-buttons">
-          <div className="all-podcasts">All Products</div>
+          <div className="all-podcasts">All Case Studies</div>
           <button className="slide-btn" onClick={() => scrollSlider(-1)}><i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i></button>
-          <button className="slide-btn" onClick={() => scrollSlider(1)}><i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i></button>
+          <button className="slide-btn" onClick={() => scrollSlider(1)}><i className="ri-arrow-right-s-line" style={{ fontSize: "24px" }}></i></button>
         </div>
       </div>
 
-      <div className="slider-container d-flex" id="slider">
+      <div className="slider-container2 d-flex" id="slider">
         {cards.map((card, index) => (
           <div
             className="box"

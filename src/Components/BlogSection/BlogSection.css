@@ -1,6 +1,7 @@
 .blog-slider-wrapper {
   padding: 40px 64px;
   overflow-x: auto;
+  margin-bottom: 50px;
 }
 
 .blog-slider {
@@ -69,10 +70,9 @@
 }
 
 .blog-heading {
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 1.9rem;
+  font-weight:700;
   margin: 0;
-  max-width: 600px;
 }
 
 .header-right {
@@ -96,14 +96,16 @@
 
 .arrow-btn:hover {
   background-color: #3676ff;
+  color: white;
+  border: none;
 }
 
 .all-blogs {
   height: 50px;
-  padding: 17px 22px;
-  font-size: 1rem;
-  font-weight: 600;
-  border: 1.5px solid #969696;
+  padding: 13px 22px 22px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1.5px solid #e5e5e5;
   border-radius: 24px;
   background-color: #ffffff;
   color: #333333;
@@ -114,6 +116,7 @@
 .all-blogs:hover {
   background-color: #3676ff;
   color: #ffffff;
+  border: none;
 }
 
 

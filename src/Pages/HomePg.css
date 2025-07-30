@@ -1,3 +1,5 @@
-.home-page{
-    padding: 100px 20px 120px;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

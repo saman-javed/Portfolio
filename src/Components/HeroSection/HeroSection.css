@@ -8,7 +8,9 @@
   max-width: 1300px;
   border-radius: 10px;
 }
-
+.hero-wrapper{
+  margin: 0 32px 25px;
+}
 .bg-pattern-layer {
   position: absolute;
   top: 0;
