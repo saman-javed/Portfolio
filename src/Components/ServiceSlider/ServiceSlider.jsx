@@ -42,6 +42,7 @@ const Slider = () => {
       <div className="slider-topbar">
         <h2 className="slider-heading">What would you like to get done?</h2>
         <div className="slider-buttons">
+           <div className="all-services">All Services</div>
           <button className="arrow-btn" onClick={handlePrev}>
             <i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i>
           </button>
