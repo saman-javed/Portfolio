@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import "./FeaturedPodcasts.css";
+
+// Image Imports
 import GoogleImg from "../../assets/images/Podcast-_-Google.png";
 import IBMImg from "../../assets/images/Podcast-_-IBM.png";
 import intelImg from "../../assets/images/Podcast-_-Intel.png";
@@ -60,7 +62,7 @@ export default function FeaturedPodcasts() {
   const listRef = useRef(null);
 
   const handleNext = () => {
-    listRef.current.scrollLeft += 300; // adjust scroll distance
+    listRef.current.scrollLeft += 300;
   };
 
   const handlePrev = () => {
@@ -85,6 +87,7 @@ export default function FeaturedPodcasts() {
       <div className="podcast-list" ref={listRef}>
         {podcasts.map((item, index) => (
           <div className="podcast-card" key={index}>
+            <div className="card-bg"></div>
             <img src={item.image} alt={item.name} className="podcast-img" />
             <div className="card-overlay">
               <div className="logo-top">{item.logo}</div>

@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5rem;
-   margin-left: 60px;
+  margin-left: 60px;
 }
 
 .podcast-heading {
@@ -55,9 +55,8 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-
 .all-podcasts {
-    height: 50px;
+  height: 50px;
   padding: 13px 22px 22px;
   font-size: 0.9rem;
   font-weight: 500;
@@ -78,11 +77,17 @@
 .podcast-list {
   display: flex;
   gap: 2rem;
-  overflow-x: scroll;        
+  overflow-x: auto;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
   padding: 20px;
-  -ms-overflow-style: none;  
-  scrollbar-width: none;      
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.podcast-list::-webkit-scrollbar {
+  display: none;
 }
 
 .podcast-list::-webkit-scrollbar {
@@ -98,20 +103,45 @@
   border-radius: 16px;
   overflow: hidden;
   flex-shrink: 0;
+  scroll-snap-align: start !important;
+  flex: 0 0 auto !important;
+}
+
+.card-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(145, 144, 144, 0.404) 0%,
+    rgba(100, 100, 100, 0.055) 40%,
+    rgba(0, 0, 0, 0.979) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+.podcast-card:hover .card-bg {
+  background-color: blue;
 }
 
 .podcast-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+  z-index: 2;
 }
 
 /* Gradient Overlay */
 .card-overlay {
   position: absolute;
   top: 0;
-  z-index: 2;
   left: 0;
+  z-index: 3;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -184,30 +214,28 @@
 /* Mobile Responsive Styles */
 @media (max-width: 767px) {
   .header-right {
-    display: none; /* Hide "All Products" and arrows on mobile */
+    display: none;
   }
-  
+
   .podcast-header {
     margin-left: 30px;
     margin-bottom: 1rem;
   }
-  
+
   .podcast-list {
     justify-content: flex-start;
-    padding: 0 1rem; 
+    padding: 0 1rem;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
-  
+
   .podcast-list::-webkit-scrollbar {
-    display: none; /* Hide scrollbar */
+    display: none;
   }
-  
-  
+
   .podcast-card {
-    width: calc(100% - 2rem); 
-    margin: 0 1rem; 
-    scroll-snap-align: center;
+    width: 100% !important;
+    scroll-snap-align: start !important;
   }
 }
