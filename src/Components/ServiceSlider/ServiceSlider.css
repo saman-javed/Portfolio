@@ -1,14 +1,15 @@
-/* Entire container */
 .slider-container {
   width: 100%;
   padding: 40px 20px;
   background-color: #fff;
   box-sizing: border-box;
   overflow: hidden;
-  overflow-anchor: none; /* Prevent scroll jump on hover */
+  overflow-anchor: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* Heading on top left and buttons on top right */
 .slider-topbar {
   display: flex;
   justify-content: space-between;
@@ -17,20 +18,18 @@
 }
 
 .slider-heading {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #1f1f1f;
   margin-left: 60px;
 }
 
-/* Scroll buttons on top right */
 .slider-buttons {
   display: flex;
   gap: 10px;
   margin-right: 90px;
 }
 
-/* Slider cards layout */
 .slider-wrapper {
   display: flex;
   justify-content: center;
@@ -45,14 +44,13 @@
   max-width: 90%;
 }
 
-/* Card styling */
 .card {
-  background-color: #f9f9f9;
-  border: 1px solid #e0e0e0;
+  background-color: #f4f4f4 !important;
+  border: 1px solid #f4f4f4 !important;
   width: 320px;
-  height: 460px; /* Fixed height to prevent layout jump */
+  height: 460px;
   padding: 30px 20px;
-  border-radius: 12px;
+  border-radius: 20px !important;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   flex-shrink: 0;
@@ -63,29 +61,26 @@
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Subtle lift on hover */
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
 }
 
-
-/* Title text */
 .card-title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: #3f3f3f;
   line-height: 1.3;
+  font-weight: 500;
   margin: 30px;
-  margin-bottom: 70px;
+  margin-bottom: 80px !important;
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
-/* Animate title without changing layout */
 .card:hover .card-title {
   font-size: 1.5rem;
   transform: translateY(-10px);
 }
 
-/* Button on the card */
 .card-button {
   background-color: #0e131f;
   color: #fff;
@@ -104,19 +99,18 @@
 }
 
 .card:hover .card-button {
-   transform: scaleY(1.3) translateY(-5px);
-  background-color: transparent; 
+  transform: scaleY(1.3) translateY(-5px);
   background-image: url('../../assets/images/featured-servic-bg.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #fff; 
 }
-/* Scroll buttons */
+
 .arrow-btn {
   width: 50px;
   height: 50px;
-  border: 0.5px solid #969696;
+  border: 0.5px solid #e6e4e4;
   border-radius: 50%;
   background-color: transparent;
   display: flex;
@@ -129,15 +123,15 @@
 .arrow-btn:hover {
   background-color: #3676ff;
   color: #fff;
+  border: none;
 }
 
-/* All Services button */
 .all-services {
   height: 50px;
-  padding: 17px 22px;
+  padding: 13px 22px 22px;
   font-size: 1rem;
-  font-weight: 600;
-  border: 1.5px solid #969696;
+  font-weight: 500;
+  border: 1.5px solid #e6e4e4 !important;
   border-radius: 24px;
   background-color: #ffffff;
   color: #333333;
@@ -148,11 +142,9 @@
 .all-services:hover {
   background-color: #3676ff;
   color: #fff;
+  border: none;
 }
 
-/* ===== Responsive Styles ===== */
-
-/* For tablets and small desktops */
 @media (max-width: 1024px) {
   .slider {
     gap: 30px;
@@ -186,11 +178,7 @@
   }
 }
 
-/* ===== Updated Responsive Styles ===== */
-
-/* For screens <= 900px */
 @media (max-width: 900px) {
-  /* Hide the scroll buttons and "All Services" */
   .slider-buttons .arrow-btn,
   .slider-buttons .all-services {
     display: none;
@@ -213,13 +201,13 @@
     gap: 20px;
     max-width: 100%;
     padding: 10px 10px;
-    overflow-x: auto;         /* Allow horizontal scroll */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-    scrollbar-width: none;    /* Hide scrollbar in Firefox */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
 
   .slider::-webkit-scrollbar {
-    display: none;            /* Hide scrollbar in WebKit (Chrome, Safari) */
+    display: none;
   }
 
   .card {
@@ -240,8 +228,6 @@
   }
 }
 
-
-/* For mobile screens */
 @media (max-width: 768px) {
   .slider-topbar {
     flex-direction: column;
@@ -293,7 +279,6 @@
   }
 }
 
-/* For very small mobile devices */
 @media (max-width: 480px) {
   .slider {
     gap: 12px;

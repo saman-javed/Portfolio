@@ -1,0 +1,136 @@
+.component {
+  margin: 32px;
+}
+
+.box {
+  min-width: 680px;
+  height: 450px;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.heading {
+  margin-bottom: 50px;
+}
+
+.box:hover {
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    var(--bg-img) !important;
+}
+
+.cs_body {
+  position: relative;
+  bottom: -200px;
+  left: 0;
+  transition: bottom 0.3s ease-out;
+}
+
+.box:hover .cs_body,
+.cs_body:hover {
+  bottom: -60px;
+}
+
+.cs_footer {
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.box:hover .cs_footer,
+.cs_body:hover .cs_footer {
+  display: block;
+  opacity: 1;
+}
+
+.kpis {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.cs_card_arrow {
+  height: 44px !important;
+  width: 44px !important;
+  object-fit: contain;
+  position: absolute;
+  bottom: clamp(18px, 2vw, 32px);
+  right: clamp(24px, 2.5vw, 40px);
+  transition: ease-out 0.3s;
+}
+
+.customer img.cust_img {
+  height: 56px !important;
+  width: 56px;
+  padding: 4px;
+  border: 1px solid #fff !important;
+  border-radius: 50% !important;
+}
+
+.cs_footer .cs_desc {
+  width: 70%;
+  color: var(--white);
+  font-family: var(--manrope);
+  font-size: clamp(14px, 1vw, 16px);
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.customer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.customer img {
+  border-radius: 50%;
+}
+
+.slider-container2 {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  border-radius: 20px;
+}
+
+.slider-container2::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-btn {
+  background-color: #ffffff;
+  border: 1px solid #969696;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: #3676ff;
+  color: white;
+  border: none;
+}
+
+.header h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}

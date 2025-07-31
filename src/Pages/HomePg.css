@@ -1,4 +1,5 @@
-/* .home-page{ */
-    /* overflow-y: hidden; */
-    /* overflow-x: auto; */
-/* } */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
