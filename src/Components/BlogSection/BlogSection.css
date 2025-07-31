@@ -176,3 +176,9 @@
     font-size: 0.95rem;
   }
 }
+@media (max-width: 1032px) {
+  .header-right {
+    display: none !important;
+  }
+  
+}

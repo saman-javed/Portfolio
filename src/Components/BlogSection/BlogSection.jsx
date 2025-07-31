@@ -71,16 +71,15 @@ const BlogSlider = () => {
         <h2 className="blog-heading">Insights & Knowledge From The Digital Domain</h2>
         <div className="header-right">
           <div className="all-blogs">Read Our Blogs</div>
-         <button className="arrow-btn" onClick={handlePrev}>
-  <i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i>
-</button>
+            <button className="arrow-btn" onClick={handlePrev}>
+            <i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i>
+            </button>
 
-<button className="arrow-btn" onClick={handleNext}>
-  <i className="ri-arrow-right-s-line" style={{ fontSize: "24px" }}></i>
-</button>
-
+            <button className="arrow-btn" onClick={handleNext}>
+            <i className="ri-arrow-right-s-line" style={{ fontSize: "24px" }}></i>
+            </button>
+          </div>
         </div>
-      </div>
       <div className="blog-slider">
         {visibleBlogs.map((item, index) => (
           <div className="blog-card" key={index}>

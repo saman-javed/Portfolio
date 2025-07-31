@@ -3,9 +3,8 @@
   overflow: hidden;
   background-color: #1e2831;
   color: white;
-  padding: 100px 20px 120px; 
+  padding: 100px 20px 0px; 
   margin: 0 auto;
-  max-width: 1300px;
   border-radius: 10px;
 }
 .hero-wrapper{
@@ -28,7 +27,7 @@
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   padding: 0 20px; /* Responsive side spacing */
 }
@@ -68,8 +67,9 @@
 .clients-awards-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 100px;
+  margin-bottom: 20px;
   width: 100%;
 }
 
@@ -93,6 +93,7 @@
 
 .awards-section {
   margin-top: 0;
+
 }
 
 .awards-label {

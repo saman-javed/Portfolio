@@ -134,3 +134,9 @@
   font-size: 1.9rem;
   font-weight: 700;
 }
+@media (max-width: 1032px) {
+  .slider-buttons {
+    display: none !important;
+  }
+  
+}

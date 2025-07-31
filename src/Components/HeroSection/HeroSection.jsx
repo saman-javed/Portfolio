@@ -28,7 +28,7 @@ const HeroSection = () => {
               </div>
             </div>
 
-            <div className="awards-section">
+            <div className="awards-section1">
               <p className="awards-label">AWARDS</p>
               <div className="awards-logos">
                 <span>Inc. 5000</span>
