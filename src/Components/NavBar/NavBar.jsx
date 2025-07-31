@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './NavBar.css';
-import logo from '../../assets/images/txel-Logo.svg';
+import logo from '../../assets/images/vertexai-logo.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

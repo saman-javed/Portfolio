@@ -17,6 +17,12 @@
 
 }
 
+.navbar-logo img {
+  height: 50px; /* Adjust this value as needed */
+  width: auto;
+}
+
+
 .navbar-logo {
   margin-right: 3rem; 
   margin-left: -1rem;  
