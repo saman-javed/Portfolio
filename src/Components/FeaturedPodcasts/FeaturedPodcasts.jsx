@@ -1,8 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
 import "./FeaturedPodcasts.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-
-// Image Imports
 import GoogleImg from "../../assets/images/Podcast-_-Google.png";
 import IBMImg from "../../assets/images/Podcast-_-IBM.png";
 import intelImg from "../../assets/images/Podcast-_-Intel.png";
@@ -60,40 +57,33 @@ const podcasts = [
 ];
 
 export default function FeaturedPodcasts() {
-  const [startIndex, setStartIndex] = useState(0);
+  const listRef = useRef(null);
 
   const handleNext = () => {
-    if (startIndex + 3 < podcasts.length) {
-      setStartIndex(startIndex + 1);
-    }
+    listRef.current.scrollLeft += 300; // adjust scroll distance
   };
 
   const handlePrev = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
-    }
+    listRef.current.scrollLeft -= 300;
   };
-
-  const visiblePodcasts = podcasts.slice(startIndex, startIndex + 3);
 
   return (
     <div className="podcast-wrapper">
       <div className="podcast-header">
         <h2 className="podcast-heading">Featured Podcasts</h2>
-      <div className="header-right">
-  <div className="all-podcasts">All Podcasts</div>
-   <button className="arrow-btn" onClick={handlePrev}>
-  <i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i>
-</button>
-
-<button className="arrow-btn" onClick={handleNext}>
-  <i className="ri-arrow-right-s-line" style={{ fontSize: "24px" }}></i>
-</button>
-</div>
+        <div className="header-right">
+          <div className="all-podcasts">All Podcasts</div>
+          <button className="arrow-btn" onClick={handlePrev}>
+            <i className="ri-arrow-left-s-line" style={{ fontSize: "24px" }}></i>
+          </button>
+          <button className="arrow-btn" onClick={handleNext}>
+            <i className="ri-arrow-right-s-line" style={{ fontSize: "24px" }}></i>
+          </button>
+        </div>
       </div>
 
-      <div className="podcast-list">
-        {visiblePodcasts.map((item, index) => (
+      <div className="podcast-list" ref={listRef}>
+        {podcasts.map((item, index) => (
           <div className="podcast-card" key={index}>
             <img src={item.image} alt={item.name} className="podcast-img" />
             <div className="card-overlay">

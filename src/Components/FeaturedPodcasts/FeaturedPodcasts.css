@@ -75,15 +75,20 @@
   border: none;
 }
 
-/* Slider */
 .podcast-list {
   display: flex;
   gap: 2rem;
-  overflow: hidden;
-  justify-content: center;
-  transition: transform 0.5s ease;
+  overflow-x: scroll;        
+  scroll-behavior: smooth;
   padding: 20px;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;      
 }
+
+.podcast-list::-webkit-scrollbar {
+  display: none;               
+}
+
 
 /* Card */
 .podcast-card {
